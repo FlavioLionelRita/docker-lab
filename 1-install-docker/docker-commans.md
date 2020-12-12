@@ -45,6 +45,7 @@ docker tag 5278638e7fc15e977114ca1e9fa4a0e695f1c7acaa5875edc5a1cf3fb864704d api-
 
 docker    
 
+
 docker build -t app-testris:2.1 . ;
 
 
