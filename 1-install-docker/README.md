@@ -2,6 +2,7 @@
 
 
 ## install docker
+### Ubuntu
 ```
 sudo apt update
 sudo apt install apt-transport-https ca-certificates software-properties-common
@@ -11,6 +12,18 @@ sudo apt update
 apt-cache policy docker-ce
 sudo apt install docker-ce
 sudo systemctl status docker
+```
+
+### raspberry
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo reboot
+curl -fsSL https://get.docker.com -o docker-script.sh
+sudo sh docker-script.sh
+sudo dpkg --configure -a
+sudo usermod -aG docker pi
+docker info
 ```
 
 ## run docker without root user
@@ -31,7 +44,7 @@ docker buildx uninstall
 
 # referece
 - [docker](https://www.digitalocean.com/community/tutorials/como-instalar-y-usar-docker-en-ubuntu-18-04-1-es)
+- [install docker in raspberry](https://rsw.io/how-to-install-docker-on-a-raspberry-pi/)
 - [lightweight images](https://semaphoreci.com/blog/2016/12/13/lightweight-docker-images-in-5-steps.html)
 - [lightweight images](https://medium.com/trendyol-tech/how-we-reduce-node-docker-image-size-in-3-steps-ff2762b51d5a)
 - [install buildx](https://medium.com/@artur.klauser/building-multi-architecture-docker-images-with-buildx-27d80f7e2408)
-
